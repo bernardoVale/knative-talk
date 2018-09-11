@@ -85,10 +85,10 @@ Another API
 Deployment process simple
 Scale is simple
 
-SERVERLESS PROBLEM
-SCALE TO ZERO
-LOGGING
-
+1 - Using less resources (scale to 0)
+2 - Testing a new version
+3 - Spliting traffic 
+4 - Build Process CI/CD
 ---
 class: top, left, fit-image
 layout: false
@@ -97,58 +97,45 @@ background-image: url(http://localhost:8000/images/microservices.png)
 # Microservices / Serverless
 
 ???
-- Observability = Logging and tracing
-- Microservices / Serverless (tracing,
-- Traffic Management
-- Security (intra-service communication / intra-service auth/auth)
+1 - Observability = Logging and tracing
+2 - Microservices / Serverless (tracing,
+3 - Traffic Management
+4 - Security (intra-service communication / intra-service auth/auth)
 
 ---
+# What is Knative ?
 
-# What is Knative
-
-
-Provide a set of middleware components that are essential to build modern, source-centric, and container-based applications that can run anywhere.
-
-Each of the components under the Knative project attempt to identify common patterns and codify the best practices that are shared by successful real-world Kubernetes-based frameworks and applications. 
-
-Knative components focus on solving many mundane but difficult tasks such as:
+A new set of primitives to build/deploy Kubernetes Apps 
 
 ???
-A set of CDR
+Um grupo de componentes onde
+Cada componente foi desenvolvido pensando em resolver padrões comuns e trazendo melhores práticas de applicações bem sucedidas
+--
 
----
-# Knative Build
+Current components:
 
 - Build
-- BuildTemplate
-- Builder
+- Serving
+- Eventing
 
 ???
+Esses componentes estão focados em resolver tarefas comuns (exemplos que trouxemos acima)
+
 
 ---
-
-# Build Templates
-
-A reusable set of steps to build a function/app. Each step is a `builder`
+class: center, middle
+# Knative Build
 
 ???
-Builder is just a container 
-ClusterBuildTemplates same thing but with cluster level scope
-https://github.com/knative/build-templates
-
+Build orchestration
 ---
 
-# Builder
-
-Takes source code +  set of steps or a template to build a function/app
-
----
-
-# Knative Serving Model
+# Knative Serving
 
 
 .middle[![knative](http://localhost:8000/images/serving-model.png)]
 
+---
 
 # Eventing
 
